@@ -7,7 +7,7 @@ RUN pip install --upgrade pip
 RUN cd /
 RUN mkdir files
 RUN cd files
-RUN wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki.ko.vec -P 
+RUN wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki.ko.vec
 RUN apt-get install g++ openjdk-7-jdk
 RUN apt-get install python3-dev; pip3 install konlpy
 RUN cd ~
