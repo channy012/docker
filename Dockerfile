@@ -7,9 +7,10 @@ RUN pip install --upgrade pip
 RUN cd /
 RUN mkdir files
 RUN cd files
-RUN wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki.ko.vec
-#RUN apt-get install g++ openjdk-7-jdk
-#RUN apt-get install python3-dev; pip3 install konlpy
+#RUN wget https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki.ko.vec
+RUN sudo apt-get install g++ openjdk-7-jdk python-dev python3-dev
+RUN pip3 install JPype1-py3
+RUN pip3 install konlpy
 RUN cd ~
 
 # ENTRYPOINT cd quora-nl-processing; git pull --rebase; pip install -r requirements.txt; cd ~
